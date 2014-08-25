@@ -49,7 +49,7 @@ if(isset($_POST['id']) and isset($_POST['mdp'])){
     $des = new Crypt_AES();
     $des->setKey($pk);
     $cle = base64_encode($des->encrypt($privatekey));
-    if(!file_put_contents("key/$nbr.crt","$resID;$resMDP;$cle"))//on enregistre le resultat dans le fichier de sortie
+    if(!file_put_contents("key/$nbr.crt","$resID|$resMDP|$cle"))//on enregistre le resultat dans le fichier de sortie
         echo 'Exception reçue : erreur ecriture dans le fichier<br/>';
     
     echo "<table>

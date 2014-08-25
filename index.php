@@ -31,8 +31,8 @@ if ( !file_exists($dir) ) {
     
         include('client.php');
 
-    }else if(isset($_POST['key'])){
-        include('verif_client.php');
+    }else if(isset($_POST['code'])){
+        include('validation.php');
     }else {
         include('create.php');
     }

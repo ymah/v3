@@ -1,8 +1,10 @@
 <?php
 session_save_path('temp');
 session_start();
-var_dump($_SESSION['captcha']);
+unset($_SESSION['_CAPTCHA']);
+var_dump($_SESSION);
 ?>
+<br/><br/><br/>
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8" />
@@ -16,7 +18,10 @@ var_dump($_SESSION['captcha']);
 <?php
 print_r("le captcha : ".$_SESSION['captcha']['code']);
 echo "<br/>";
-print_r("le code tapé dans le formulaire :" .htmlspecialchars($_POST['code'], ENT_COMPAT,'ISO-885429-1', true));
+echo ("le code A :" .htmlspecialchars($_SESSION['code'], ENT_COMPAT,'ISO-885429-1', true));
+echo "<br/>";
+echo ("le code B :" .htmlspecialchars($_POST['code2'], ENT_COMPAT,'ISO-885429-1', true));
+
 ?>
 
 

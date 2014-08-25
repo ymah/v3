@@ -19,8 +19,8 @@ function captcha($config = array()) {
     // Default values
     $captcha_config = array(
         'code' => '',
-        'min_length' => 5,
-        'max_length' => 5,
+        'min_length' => 8,
+        'max_length' => 8,
         'backgrounds' => array(
             $bg_path . '45-degree-fabric.png',
             $bg_path . 'cloth-alike.png',
@@ -34,12 +34,12 @@ function captcha($config = array()) {
         'fonts' => array(
             $font_path . 'times_new_yorker.ttf'
         ),
-        'characters' => '0123456789',
-        'min_font_size' => 14,
-        'max_font_size' => 14,
+        'characters' => 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789',
+        'min_font_size' => 16,
+        'max_font_size' => 16,
         'color' => '#666',
-        'angle_min' => 0,
-        'angle_max' => 10,
+        'angle_min' => -30,
+        'angle_max' => 30,
         'shadow' => true,
         'shadow_color' => '#fff',
         'shadow_offset_x' => -1,
