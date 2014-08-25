@@ -9,3 +9,8 @@ commit:
 	git commit -m 'test'
 	git remote add origin https://github.com/ymah/v3.git
 	git push -u origin master 
+
+recommit:
+	git add *
+	git commit -m 'test'
+	git push -u origin master
