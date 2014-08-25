@@ -5,9 +5,6 @@ include('captcha.php');
 $_SESSION =array();
 $_SESSION['captcha']= captcha();
 
-$_SESSION['index'] = 0;
-$_SESSION['index']++;
-
 ?>
 
 
@@ -32,15 +29,11 @@ $_SESSION['index']++;
     <p><label>Veuillez reproduire les numéros présents sur le captcha</label><p>
 <?php
     echo '<img src="' . $_SESSION['captcha']['image_src'] . '" alt="CAPTCHA" />';
-$_SESSION['index']++;
+var_dump($_SESSION['captcha']);
 ?>
 <p><input type="text" name ="code"/></p>
     <p><input type="submit" value="valider"/></p>
 
     </form>
-<?php 
-$_SESSION['index']++;
-
-?>
 </body>
 </html>
